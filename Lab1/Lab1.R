@@ -74,4 +74,41 @@ d.stations %>% slice_min(length)
 
 
 
+#Task Two!!
+#2.1
+d.counties %>% ggplot(., aes(x =ALAND10, y=AWATER10, color = STATEFP10)) +
+  geom_point()+
+  theme_classic()+
+  labs(title = "Relationship Between Land and Water",
+       x = "Land",
+       y = "Water")
+
+#2.2
+d.stations %>% ggplot(., aes(x =Drainage_A)) +
+  geom_histogram(fill = "darkgreen")+
+  theme_minimal()+
+  labs(title = "Count of Drainage A",
+       x = "Drainage A",
+       y = "Count")
+
+
+
+#Task Three!!
+summary.stats <- function(vec){
+  if (!is.numeric(vec)){
+    stop("this ain't a vector, bro")
+  }
+ 
+  return(list(
+  sorted_vector = sort(vec, decreasing = FALSE),
+  mean = mean(vec),
+  median = median(vec),
+  max = max(vec),
+  min = min(vec)))}
+
+vec <-c(10, 100, 1000)
+summary.stats(vec)
+  
+
+
 
