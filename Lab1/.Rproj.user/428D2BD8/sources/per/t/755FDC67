@@ -3,7 +3,7 @@
     "path": "C:/Users/kcraft5/Desktop/Lab_1/Lab1/Lab1.R",
     "project_path": "Lab1.R",
     "type": "r_source",
-    "hash": "3432274535",
+    "hash": "486631246",
     "contents": "",
     "dirty": false,
     "created": 1738249939728.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "111,0",
-        "scrollLine": "87"
+        "cursorPosition": "0,32",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1739299854,
+    "lastKnownWriteTime": 1739392245,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1739299854642,
+    "last_content_update": 1739392245433,
     "read_only": false,
     "read_only_alternatives": []
 }

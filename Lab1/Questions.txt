@@ -1,0 +1,11 @@
+Questions!!
+
+1. These statements are not equivalent. Firsly, the order of the columns in the data frame would be different seeing as the resulting dataset has the columns from the 
+first argument and then is extended for the second argument. Additonally, the output geometry would be different. For the stations that intersect with counties the output
+would be points, each representing a station that falls within a county. For the counties that intersect with stations, the output would be polygons representing the counties
+that have stations within them. 
+
+2. Task 4 was most definitely the hardest. Figuring out how to intersect the datasets correctly was a challenge but rewarding once I figured it out. Aditionally, using the
+mutate function to add columns to datasets was new to me. We probably went over it in class and I forgot but it was still fun to figure out.
+
+3. I want to make more fun plots and graphs. I love a figure so the more of that the better. 

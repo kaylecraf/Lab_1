@@ -1,3 +1,5 @@
+#Tasks are farther down at line 56
+
 #load packages and data
 library(tidyverse)
 library(ggplot2)
@@ -48,10 +50,16 @@ del.stations <- sf::st_intersection(d.stations,del.counties)
 glimpse(del.stations)
 
 
+
+
+
 #Task One!!
 #1.1
-d.counties <- d.counties %>% dplyr::group_by(STATEFP10) %>% mutate(stateArea = sum(ALAND10+AWATER10))
-d.counties <- d.counties %>% mutate(LandAreaPrecent = (ALAND10/stateArea)*100)
+d.counties <- d.counties %>%
+  dplyr::group_by(STATEFP10) %>%
+  mutate(stateArea = sum(ALAND10+AWATER10))
+d.counties <- d.counties %>%
+  mutate(LandAreaPrecent = (ALAND10/stateArea)*100)
 
 #1.2
 d.counties <- d.counties %>%
@@ -109,6 +117,30 @@ summary.stats <- function(vec){
 vec <-c(10, 100, 1000)
 summary.stats(vec)
   
+#Task Four!!
+#4.1
+countystations <- sf::st_intersection(d.counties,d.stations)
+countystations %>%
+  group_by(STATEFP10) %>%
+  summarise(stationspertstate = n())
+
+#4.2
+d.counties %>%
+  as_tibble() %>%
+  dplyr::filter(STATEFP10 == 36) %>%
+  summarise(AverageNYCounty = mean(Shape_Area))
+
+#4.3
+AVGDrain <- countystations %>% 
+  group_by(STATEFP10) %>%
+  summarise(AvgDrainage = mean(Drainage_A))
+AVGDrain %>%
+  dplyr::slice_max(AvgDrainage)
+
+
+
+
+
 
 
 
